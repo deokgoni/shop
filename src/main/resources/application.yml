@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true  //시스템 아웃으로 찍히므로 주석
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+  profiles:
+    include: oauth
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
