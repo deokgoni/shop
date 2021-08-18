@@ -17,7 +17,8 @@ spring:
       enabled: true
   profiles:
     include: oauth
-
+  session:
+    store-type: jdbc
 logging:
   level:
     org.hibernate.SQL: debug
